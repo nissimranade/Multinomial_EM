@@ -66,46 +66,115 @@ def compute_average_segment_counts(all_data, populations, data):
     return avg_seg_count, ratios_to_normal, normal_pop_name
 
 
-def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], step_size=0.1, plot=True):
+def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], step_size=0.1, 
+                                     find_local_minima=False, window_size=2):
     """
     Compute optimal ploidy multiplier and integer copy number profile for a population.
+    
+    Parameters:
+    - ratios_df: DataFrame with ratio data and segment information
+    - pop_col: Column name for the population ratios (e.g., 'A1111_ratio')
+    - m_range: Range of multipliers to test as [min, max] (default: [1.5, 6])
+    - step_size: Step size for multiplier range (default: 0.1)
+    - find_local_minima: Whether to find and return local minima (default: False)
+    - window_size: Number of points to check on each side for local minima (default: 2)
+    
+    Returns:
+    - optimal_m: Best multiplier value
+    - min_cost: Minimum cost achieved
+    - results_df: DataFrame with scaled and integer copy number profiles
+    - cost_results: Dictionary of all tested multipliers and their costs
+    - local_minima: List of tuples (multiplier, cost) for local minima (if find_local_minima=True)
     """
+    
+    # Create range of multipliers to test
     m_values = np.arange(m_range[0], m_range[1] + step_size, step_size)
+    
+    # Get ratios and segment lengths
     ratios = ratios_df[pop_col].values
     lengths = (ratios_df['end'] - ratios_df['start']).values
     
     cost_results = {}
     
+    # Test each multiplier
     for m in m_values:
+        # Compute integer copy numbers
         scaled_ratios = m * ratios
         integer_copies = np.round(scaled_ratios).astype(int)
+        
+        # Compute weighted cost: sum of length * (scaled_ratio - integer)^2
         deviations = scaled_ratios - integer_copies
         weighted_deviations_squared = lengths * (deviations ** 2)
         total_cost = np.sum(weighted_deviations_squared)
+        
         cost_results[m] = total_cost
     
+    # Find optimal multiplier
     optimal_m = min(cost_results.keys(), key=lambda x: cost_results[x])
     min_cost = cost_results[optimal_m]
     
+    # Compute integer profile with optimal multiplier
     optimal_scaled_ratios = optimal_m * ratios
     integer_profile = np.round(optimal_scaled_ratios).astype(int)
     
+    # Create results DataFrame
     results_df = ratios_df[['chrom', 'start', 'end']].copy()
     results_df[f'{pop_col}_scaled'] = optimal_scaled_ratios
     results_df[f'{pop_col}_integer'] = integer_profile
     
-    if plot:
-        _plot_ploidy_optimization(ratios_df, pop_col, cost_results, optimal_m, results_df)
+    # Find local minima if requested
+    local_minima = []
+    if find_local_minima:
+        # Sort by multiplier value for local minima detection
+        sorted_items = sorted(cost_results.items())
+        m_vals = [item[0] for item in sorted_items]
+        costs = [item[1] for item in sorted_items]
+        
+        # Check each point (excluding edges that don't have enough neighbors)
+        for i in range(window_size, len(costs) - window_size):
+            current_cost = costs[i]
+            current_m = m_vals[i]
+            
+            # Check if current point is lower than all points in the window
+            is_local_min = True
+            
+            # Check left side
+            for j in range(i - window_size, i):
+                if costs[j] <= current_cost:
+                    is_local_min = False
+                    break
+            
+            # Check right side
+            if is_local_min:
+                for j in range(i + 1, i + window_size + 1):
+                    if costs[j] <= current_cost:
+                        is_local_min = False
+                        break
+            
+            if is_local_min:
+                local_minima.append((current_m, current_cost))
+        
+        # Sort local minima by cost (best first)
+        local_minima.sort(key=lambda x: x[1])
+
+    # Print summary
+    total_length = np.sum(lengths)
+    avg_copy_number = np.sum(integer_profile * lengths) / total_length
     
-    return optimal_m, min_cost, results_df, cost_results
-
-
-def _plot_ploidy_optimization(ratios_df, pop_col, cost_results, optimal_m, results_df):
-    """Helper function to plot ploidy optimization results."""
-    # Implementation of the plotting logic from your notebook
-    # (This would be the plotting code from compute_optimal_ploidy_and_profile)
-    pass
-
+    print(f"\nOptimal Results for {pop_col.replace('_ratio', '')}:")
+    print(f"Optimal multiplier (m): {optimal_m:.3f}")
+    print(f"Minimum cost: {min_cost:.2e}")
+    print(f"Average copy number: {avg_copy_number:.2f}")
+    
+    if find_local_minima:
+        print(f"Found {len(local_minima)} local minima")
+    
+    # Return results
+    if find_local_minima:
+        return optimal_m, min_cost, results_df, cost_results, local_minima
+    else:
+        return optimal_m, min_cost, results_df, cost_results
+    
 
 def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_normal, ploidies, normal_pop_name):
     """
