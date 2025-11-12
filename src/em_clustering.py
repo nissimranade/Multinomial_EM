@@ -37,7 +37,7 @@ def make_random_seeds(q_data, num_seeds=10):
 def EM_algorithm(data, s, MIN_DIFF=0.001):
     """Core EM algorithm implementation."""
     obs_NV = np.array(data)[:,:].T
-    log_likelihood = -np.Inf
+    log_likelihood = -np.inf
     
     mult_KV = np.array(s).T
     mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
@@ -60,7 +60,7 @@ def EM_algorithm(data, s, MIN_DIFF=0.001):
             break
             
     if log_diff > 10*MIN_DIFF:
-        return logprob_NK, -np.Inf, mult_KV
+        return logprob_NK, -np.inf, mult_KV
     
     return logprob_NK, log_likelihood, mult_KV
 
@@ -79,7 +79,7 @@ def alg_on_best_of_seeds(all_data, num_seeds=10):
     q_data = all_data/all_data.sum(axis=0)
     Seeds = make_random_seeds(q_data, num_seeds)
 
-    best_log_lik = -np.Inf
+    best_log_lik = -np.inf
     for s in Seeds:
         print("Trying new seed")
         logprob_NK, log_lik, mult_KV = EM_algorithm(all_data, s)
