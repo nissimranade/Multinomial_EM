@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 
 
-def make_unif_dict(all_data, reassigned_populations, data):
+def make_unif_dict(all_data, reassigned_populations, data_lengths):
     """Make uniformity dictionary for each population."""
     unif_dict = {}
     dev_from_median = {}
     for pop in reassigned_populations:
         pop_cells = reassigned_populations[pop]["cells"]
         pop_data = all_data[pop_cells]
-        unif = pop_data.sum(axis=1)/data["lengths"]
+        unif = pop_data.sum(axis=1)/data_lengths
         unif = unif/np.median(unif)
         unif_dict[pop] = unif
         dev_from_median[pop] = np.median(np.abs(unif - 1))
@@ -28,7 +28,7 @@ def compute_average_segment_counts(all_data, populations, data):
     Compute average readcount per cell in each segment for each population,
     and ratios relative to the normal population.
     """
-    unif_dict, normal_pop_name = make_unif_dict(all_data, populations, data)
+    unif_dict, normal_pop_name = make_unif_dict(all_data, populations, data["lengths"])
     print(f"Normal population identified as: {normal_pop_name}")
     
     avg_seg_count = pd.DataFrame()
@@ -179,22 +179,42 @@ def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], ste
 def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_normal, ploidies, normal_pop_name):
     """
     Optimized version of copy number matrix creation using vectorized operations.
+    
+    Parameters:
+    - all_data: DataFrame with segments as rows and cells as columns
+    - reassigned_populations: Dictionary of populations with their cell lists
+    - ratios_to_normal: DataFrame with ratio data
+    - ploidies: Dictionary with optimal multipliers for each population
+    - normal_pop_name: Name of the normal population
+    
+    Returns:
+    - heatmap_df: DataFrame with copy numbers (segments × cells)
+    - cell_pop_mapping: Dictionary mapping cells to their populations
+    - pop_boundaries: List of tuples (pop_name, start_idx, end_idx)
+    - segment_info: DataFrame with segment chromosome and position info
     """
+    import numpy as np
+    import pandas as pd
+    
+    # Create cell to population mapping
     cell_pop_mapping = {}
     for pop_name, pop_data in reassigned_populations.items():
         for cell in pop_data["cells"]:
             cell_pop_mapping[cell] = pop_name
     
+    # Order cells by population
     ordered_cells = []
     pop_boundaries = []
     current_pos = 0
     
+    # Add normal population first
     normal_cells = reassigned_populations[normal_pop_name]["cells"]
     ordered_cells.extend(normal_cells)
     current_pos += len(normal_cells)
     pop_boundaries.append((normal_pop_name, 0, current_pos))
     
-    for pop_name in sorted(reassigned_populations.keys()):
+    # Add other populations
+    for pop_name in reassigned_populations.keys():
         if pop_name != normal_pop_name:
             pop_cells = reassigned_populations[pop_name]["cells"]
             ordered_cells.extend(pop_cells)
@@ -202,6 +222,7 @@ def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_n
             current_pos += len(pop_cells)
             pop_boundaries.append((pop_name, start_pos, current_pos))
     
+    # Order segments by chromosome and position
     segment_order = ratios_to_normal[['chrom', 'start', 'end']].copy()
     chrom_order = ['chr' + str(i) for i in range(1, 23)] + ['chrX']
     segment_order['chrom_num'] = segment_order['chrom'].apply(
@@ -210,39 +231,60 @@ def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_n
     segment_order = segment_order.sort_values(['chrom_num', 'start']).reset_index(drop=True)
     ordered_segment_indices = segment_order.index
     
+    # Get ordered data (this is the key optimization)
     ordered_data = all_data.iloc[ordered_segment_indices][ordered_cells]
     
     print(f"Processing {len(ordered_segment_indices)} segments using vectorized operations...")
     
+    # Step 1: Compute normal_factor (segment average for normal cells)
     normal_cells_data = ordered_data.loc[:, ordered_data.columns.isin(normal_cells)]
-    normal_factor = normal_cells_data.mean(axis=1).values
-    normal_factor = np.where(normal_factor > 0, normal_factor, 1)
+    normal_factor = normal_cells_data.mean(axis=1).values  # Average across normal cells for each segment
+    normal_factor = np.where(normal_factor > 0, normal_factor, 1)  # Avoid division by zero
     
+    print("Normal factor computed")
+    
+    # Step 2: Normalize all cells by normal_factor
     normalized_data = ordered_data.div(normal_factor, axis=0)
-    cell_means = normalized_data.mean(axis=0)
-    cell_means = np.where(cell_means > 0, cell_means, 1)
+    
+    print("Data normalized by normal factor")
+    
+    # Step 3: For each cell, normalize by mean over all segments in that cell
+    cell_means = normalized_data.mean(axis=0)  # Mean for each cell across all segments
+    cell_means = np.where(cell_means > 0, cell_means, 1)  # Avoid division by zero
+    
+    # Normalize each cell by its own mean
     doubly_normalized_data = normalized_data.div(cell_means, axis=1)
     
+    print("Data normalized by cell means")
+    
+    # Step 4: Apply ploidy multipliers
     heatmap_data = np.zeros_like(doubly_normalized_data.values, dtype=float)
     
     for i, cell in enumerate(ordered_cells):
         cell_pop = cell_pop_mapping[cell]
         
+        # Get appropriate multiplier
         if cell_pop == normal_pop_name:
-            multiplier = 2.0
+            multiplier = 2.0  # Normal cells get multiplier of 2
         else:
             pop_ratio_col = f"{cell_pop}_ratio"
-            multiplier = ploidies.get(pop_ratio_col, 2.0)
+            multiplier = ploidies.get(pop_ratio_col, 2.0)  # Use ploidy multiplier or default to 2
         
+        # Apply multiplier to this cell's data
         heatmap_data[:, i] = doubly_normalized_data.iloc[:, i].values * multiplier
     
+    print("Ploidy multipliers applied")
+    
+    # Create segment labels
     segment_labels = [
         f"{segment_order.loc[seg_idx, 'chrom']}:{segment_order.loc[seg_idx, 'start']}-{segment_order.loc[seg_idx, 'end']}"
         for seg_idx in ordered_segment_indices
     ]
     
+    # Create heatmap DataFrame
     heatmap_df = pd.DataFrame(heatmap_data, columns=ordered_cells, index=segment_labels)
     
+    # Create segment info DataFrame
     segment_info = segment_order[['chrom', 'start', 'end', 'chrom_num']].copy()
     segment_info.index = segment_labels
     
