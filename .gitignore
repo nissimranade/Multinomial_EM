@@ -1,5 +1,5 @@
 # Ignore notebooks with specific patterns
-notebooks/Multinomial_EM*.ipynb
+notebooks/Multinomial EM*.ipynb
 notebooks/make_equi_binned_table.ipynb
 
 # Keep the main notebook
