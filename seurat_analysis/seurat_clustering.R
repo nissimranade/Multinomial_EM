@@ -39,6 +39,14 @@ seurat_obj_all <- FindNeighbors(seurat_obj_all, dims = 1:10)
 seurat_obj_all <- FindClusters(seurat_obj_all, resolution = 0.5)
 seurat_obj_all <- RunUMAP(seurat_obj_all, dims = 1:10)
 
+# WGS bins - all cells cluster assignments
+clusters_wgs_all <- data.frame(
+  cell_id = colnames(seurat_obj_all),
+  cluster = Idents(seurat_obj_all)
+)
+write.table(clusters_wgs_all, file = "cluster_assignments_WGS_all_cells.txt", 
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
 # Save results
 saveRDS(seurat_obj_all, file = "seurat_clusters_WGS_all_cells.rds")
 
@@ -61,6 +69,15 @@ seurat_obj_good <- FindNeighbors(seurat_obj_good, dims = 1:10)
 seurat_obj_good <- FindClusters(seurat_obj_good, resolution = 0.5)
 seurat_obj_good <- RunUMAP(seurat_obj_good, dims = 1:10)
 
+# WGS bins - good cells cluster assignments
+clusters_wgs_good <- data.frame(
+  cell_id = colnames(seurat_obj_good),
+  cluster = Idents(seurat_obj_good)
+)
+write.table(clusters_wgs_good, file = "cluster_assignments_WGS_good_cells.txt",
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
+
 # Save results
 saveRDS(seurat_obj_good, file = "seurat_clusters_WGS_good_cells.rds")
 
@@ -69,7 +86,7 @@ p <- DimPlot(seurat_obj_good, reduction = "umap", label = TRUE)
 ggsave("seurat_clusters_WGS_good_cells_umap.png", p, width = 6, height = 5)
 
 # Path to your file
-file_path <- "../data/t57.bincount_without_WGS_segmentation.txt"
+file_path <- "../data/t57.bincounts_without_WGS_segmentation.txt"
 good_cells_path <- "../data/t57.not_broken_final_list.txt"
 
 # Load full table
@@ -105,6 +122,15 @@ seurat_obj_all <- FindNeighbors(seurat_obj_all, dims = 1:10)
 seurat_obj_all <- FindClusters(seurat_obj_all, resolution = 0.5)
 seurat_obj_all <- RunUMAP(seurat_obj_all, dims = 1:10)
 
+# equi bins - all cells cluster assignments
+clusters_equi_all <- data.frame(
+  cell_id = colnames(seurat_obj_all),
+  cluster = Idents(seurat_obj_all)
+)
+write.table(clusters_equi_all, file = "cluster_assignments_equi_bins_all_cells.txt", 
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
+
 # Save results
 saveRDS(seurat_obj_all, file = "seurat_clusters_equi_bins_all_cells.rds")
 
@@ -126,6 +152,15 @@ seurat_obj_good <- RunPCA(seurat_obj_good)
 seurat_obj_good <- FindNeighbors(seurat_obj_good, dims = 1:10)
 seurat_obj_good <- FindClusters(seurat_obj_good, resolution = 0.5)
 seurat_obj_good <- RunUMAP(seurat_obj_good, dims = 1:10)
+
+# equi bins - good cells cluster assignments
+clusters_equi_good <- data.frame(
+  cell_id = colnames(seurat_obj_good),
+  cluster = Idents(seurat_obj_good)
+)
+write.table(clusters_equi_good, file = "cluster_assignments_equi_bins_good_cells.txt", 
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
 
 # Save results
 saveRDS(seurat_obj_good, file = "seurat_clusters_equi_bins_good_cells.rds")
