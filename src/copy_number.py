@@ -22,6 +22,21 @@ def make_unif_dict(all_data, reassigned_populations, data_lengths):
     min_dev_pop = min(dev_from_median, key=dev_from_median.get)
     return unif_dict, min_dev_pop
 
+def compute_read_counts_relative_to_normal(all_data, populations, normal_pop_name):
+    """ Average read counts in the cluster devided by the average read counts in the normal cluster"""
+    mean_read_counts = {}
+    for pop_name, pop_info in populations.items():
+        cells = pop_info['cells']
+        mean_count = all_data[cells].sum(axis=0).mean()
+        mean_read_counts[pop_name] = mean_count
+        #print(f"Mean read count for population {pop_name}: {mean_count:.2f}")
+    normal_avg = mean_read_counts[normal_pop_name].copy()
+    for pop_name, _ in populations.items():
+        mean_read_counts[pop_name] = mean_read_counts[pop_name]/normal_avg
+        print(f"Mean read count ratio for population {pop_name} relative to normal ({normal_pop_name}): {mean_read_counts[pop_name]:.2f}")
+    
+    return mean_read_counts
+
 
 def compute_average_segment_counts(all_data, populations, data):
     """
@@ -65,14 +80,14 @@ def compute_average_segment_counts(all_data, populations, data):
     
     return avg_seg_count, ratios_to_normal, normal_pop_name
 
-
-def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], step_size=0.1, 
+def compute_optimal_ploidy_and_profile(ratios_df, relative_counts, pop_col, m_range=[1.5, 6], step_size=0.1, 
                                      find_local_minima=False, window_size=2):
     """
     Compute optimal ploidy multiplier and integer copy number profile for a population.
     
     Parameters:
     - ratios_df: DataFrame with ratio data and segment information
+    - relative_counts: Average read counts for the population relative to normal
     - pop_col: Column name for the population ratios (e.g., 'A1111_ratio')
     - m_range: Range of multipliers to test as [min, max] (default: [1.5, 6])
     - step_size: Step size for multiplier range (default: 0.1)
@@ -109,19 +124,6 @@ def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], ste
         
         cost_results[m] = total_cost
     
-    # Find optimal multiplier
-    optimal_m = min(cost_results.keys(), key=lambda x: cost_results[x])
-    min_cost = cost_results[optimal_m]
-    
-    # Compute integer profile with optimal multiplier
-    optimal_scaled_ratios = optimal_m * ratios
-    integer_profile = np.round(optimal_scaled_ratios).astype(int)
-    
-    # Create results DataFrame
-    results_df = ratios_df[['chrom', 'start', 'end']].copy()
-    results_df[f'{pop_col}_scaled'] = optimal_scaled_ratios
-    results_df[f'{pop_col}_integer'] = integer_profile
-    
     # Find local minima if requested
     local_minima = []
     if find_local_minima:
@@ -156,7 +158,25 @@ def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], ste
         
         # Sort local minima by cost (best first)
         local_minima.sort(key=lambda x: x[1])
+        # Find optimal multiplier
+        # optimal_m is the local min value closest to 2*relative_counts[pop_col.replace('_ratio', '')]
+        target_m = 2 * relative_counts[pop_col.replace('_ratio', '')]
+        optimal_m = min(dict(local_minima).keys(), key=lambda x: abs(x - target_m))
+    
+        
+    else:
+        # Find optimal multiplier
+        optimal_m = min(cost_results.keys(), key=lambda x: cost_results[x])
+    # Compute integer profile with optimal multiplier
+    min_cost = cost_results[optimal_m]
+    optimal_scaled_ratios = optimal_m * ratios
+    integer_profile = np.round(optimal_scaled_ratios).astype(int)
 
+    # Create results DataFrame
+    results_df = ratios_df[['chrom', 'start', 'end']].copy()
+    results_df[f'{pop_col}_scaled'] = optimal_scaled_ratios
+    results_df[f'{pop_col}_integer'] = integer_profile
+    
     # Print summary
     total_length = np.sum(lengths)
     avg_copy_number = np.sum(integer_profile * lengths) / total_length
@@ -175,7 +195,6 @@ def compute_optimal_ploidy_and_profile(ratios_df, pop_col, m_range=[1.5, 6], ste
     else:
         return optimal_m, min_cost, results_df, cost_results
     
-
 def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_normal, ploidies, normal_pop_name):
     """
     Optimized version of copy number matrix creation using vectorized operations.
@@ -188,7 +207,7 @@ def create_copy_number_matrix_fast(all_data, reassigned_populations, ratios_to_n
     - normal_pop_name: Name of the normal population
     
     Returns:
-    - heatmap_df: DataFrame with copy numbers (segments × cells)
+    - heatmap_df: DataFrame with copy numbers (segments cells)
     - cell_pop_mapping: Dictionary mapping cells to their populations
     - pop_boundaries: List of tuples (pop_name, start_idx, end_idx)
     - segment_info: DataFrame with segment chromosome and position info
