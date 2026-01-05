@@ -3,8 +3,8 @@ library(patchwork)
 library(ggplot2)
 
 # Path to your file
-file_path <- "../data/t57.bin_count_table_all_cells.txt"
-good_cells_path <- "../data/t57.not_broken_final_list.txt"
+file_path <- "../data/t57/t57.bin_count_table_all_cells.txt"
+good_cells_path <- "../data/t57/t57.not_broken_final_list.txt"
 
 # Load full table
 df <- read.table(file_path, header = TRUE, sep = "\t", stringsAsFactors = FALSE)
@@ -86,8 +86,8 @@ p <- DimPlot(seurat_obj_good, reduction = "umap", label = TRUE)
 ggsave("seurat_clusters_WGS_good_cells_umap.png", p, width = 6, height = 5)
 
 # Path to your file
-file_path <- "../data/t57.bincounts_without_WGS_segmentation.txt"
-good_cells_path <- "../data/t57.not_broken_final_list.txt"
+file_path <- "../data/t57/t57.bincounts_without_WGS_segmentation.txt"
+good_cells_path <- "../data/t57/t57.not_broken_final_list.txt"
 
 # Load full table
 df <- read.table(file_path, header = TRUE, sep = "\t", stringsAsFactors = FALSE)

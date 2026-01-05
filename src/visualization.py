@@ -714,12 +714,12 @@ def plot_copy_number_heatmap(heatmap_df, pop_boundaries, segment_info, title="Co
     # Normalize segment lengths to determine how many rows each segment gets
     # Scale so that smallest segment gets 1 row, largest gets proportional amount
     min_length = segment_lengths.min()
-    max_rows_per_segment = 10  # Maximum rows any single segment can occupy
+    #max_rows_per_segment = 10  # Maximum rows any single segment can occupy
     
     # Calculate rows per segment based on length (minimum 1 row)
     rows_per_segment = np.maximum(1, np.round(segment_lengths / min_length).astype(int))
     # Cap at maximum to prevent huge chromosomes from dominating
-    rows_per_segment = np.minimum(rows_per_segment, max_rows_per_segment)
+    #rows_per_segment = np.minimum(rows_per_segment, max_rows_per_segment)
     
     # Create expanded heatmap data
     expanded_data = []
