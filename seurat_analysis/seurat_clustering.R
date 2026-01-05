@@ -85,9 +85,31 @@ saveRDS(seurat_obj_good, file = "seurat_clusters_WGS_good_cells.rds")
 p <- DimPlot(seurat_obj_good, reduction = "umap", label = TRUE)
 ggsave("seurat_clusters_WGS_good_cells_umap.png", p, width = 6, height = 5)
 
+# Load EM population assignments
+em_assignments <- read.table("../data/t57/t57_population_assignments_A_WGS_bins.txt", 
+                             header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+
+# Match EM assignments to Seurat cells
+# Create a named vector for easy lookup
+em_pops <- setNames(em_assignments$population, em_assignments$cell)
+
+# Add EM population to Seurat metadata
+seurat_obj_good$EM_population <- em_pops[colnames(seurat_obj_good)]
+
+# Plot UMAP colored by EM populations
+p_em <- DimPlot(seurat_obj_good, reduction = "umap", group.by = "EM_population", label = TRUE)
+ggsave("seurat_umap_WGS_good_cells_colored_by_EM.png", p_em, width = 6, height = 5)
+
+# Optional: Create side-by-side comparison
+p_seurat <- DimPlot(seurat_obj_good, reduction = "umap", label = TRUE) + ggtitle("Seurat Clusters")
+p_em_comp <- DimPlot(seurat_obj_good, reduction = "umap", group.by = "EM_population", label = TRUE) + ggtitle("EM Populations")
+p_combined <- p_seurat | p_em_comp
+ggsave("seurat_vs_EM_comparison_WGS_good_cells.png", p_combined, width = 12, height = 5)
+
+
 # Path to your file
 file_path <- "../data/t57/t57.bincounts_without_WGS_segmentation.txt"
-good_cells_path <- "../data/t57/t57.not_broken_final_list.txt"
+
 
 # Load full table
 df <- read.table(file_path, header = TRUE, sep = "\t", stringsAsFactors = FALSE)
