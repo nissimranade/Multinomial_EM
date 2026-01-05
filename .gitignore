@@ -22,3 +22,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+notebooks/new_beginning.ipynb
+notebooks/new_beginning_v2.ipynb
