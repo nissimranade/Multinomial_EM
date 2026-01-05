@@ -2,9 +2,12 @@ import pysam
 import pandas as pd
 import sys
 
-tumor = sys.argv[1]
+
+bamfilelist_file = sys.argv[1]
 variant_file = sys.argv[2]
 output_file = sys.argv[3]
+tumor = sys.argv[4]
+#bamfilelist_file = /mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.bamfilelist_from_siran.txt
 #output_file = f"../data/{tumor}/{tumor}.tumor_spec_variant_counts.txt"
 #variant_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/tumor_specific_variants.txt"
 variant_list = pd.read_csv(variant_file, sep="\t", header = None)
@@ -13,7 +16,7 @@ bincount_table = pd.read_csv(f"../data/{tumor}/{tumor}.bin_count_table_all_cells
 
 cell_list = bincount_table.columns[5:]
 
-bamfilelist = pd.read_csv(f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.bamfilelist_from_siran.txt", header = None)[0].values
+bamfilelist = pd.read_csv(bamfilelist_file, header = None)[0].values
 results = []
 
 for bam_path in bamfilelist:
