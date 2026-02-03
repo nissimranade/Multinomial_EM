@@ -595,7 +595,9 @@ def plot_ploidy_comparison(results_df, cost_results, optimal_m, local_m, pop_col
     # Set y-axis limits first
     all_values = list(plot_data[scaled_col])
     y_max = max(all_values) * 1.1
-    y_min = max(0, min(all_values) * 0.9)
+    #y_min = max(0, min(all_values) * 0.9)
+    y_max = min(12, y_max)
+    y_min = 0
     
     ax2.set_ylim(y_min, y_max)
     ax2_green_left.set_ylim(y_min, y_max)
