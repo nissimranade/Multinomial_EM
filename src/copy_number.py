@@ -81,7 +81,7 @@ def compute_average_segment_counts(all_data, populations, data):
     return avg_seg_count, ratios_to_normal, normal_pop_name
 
 def compute_optimal_ploidy_and_profile(ratios_df, relative_counts, pop_col, m_range=[1.5, 6], step_size=0.1, 
-                                     find_local_minima=False, window_size=2):
+                                     find_local_minima=True, window_size=2):
     """
     Compute optimal ploidy multiplier and integer copy number profile for a population.
     
