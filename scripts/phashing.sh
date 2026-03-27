@@ -1,4 +1,17 @@
 
+INPUT=/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/t46/t46.germline_variants_hg38.nochr.vcf.gz
+OUTDIR=/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/t46/germline_var
+
+REFDIR=/mnt/wigstore6/user/ranade/LOH_analysis/reference/hg38/1000G_GRCh38_phased
+MAPDIR=/mnt/wigstore6/user/ranade/LOH_analysis/genetic_maps
+
+BEAGLE=/mnt/wigstore6/user/ranade/LOH_analysis/beagle.jar
+GATK=/mnt/wigstore6/user/ranade/gatk-4.6.1.0/gatk
+
+CHAIN=/mnt/wigstore6/user/ranade/LOH_analysis/reference/hg38ToHg19.over.chain.gz
+HG19FA=/mnt/wigstore6/user/ranade/LOH_analysis/reference/hg19.fa
+
+
 for chr in {1..22} X; do
   echo "Splitting chr$chr..."
   bcftools view -r $chr $INPUT -Oz -o $OUTDIR/t46.var.chr${chr}.vcf.gz

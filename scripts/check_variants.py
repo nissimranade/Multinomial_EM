@@ -3,31 +3,38 @@ import pandas as pd
 import sys
 
 
-bamfilelist_file = sys.argv[1]
-variant_file = sys.argv[2]
-output_file = sys.argv[3]
-tumor = sys.argv[4]
-chr = sys.argv[5]
-#bamfilelist_file = /mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.bamfilelist_from_siran.txt
-#output_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.{chr}.germline_variant_counts.txt"
-#variant_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/tumor_specific_variants.txt"
+#bamfilelist_file = sys.argv[1]
+# variant_file = sys.argv[2]
+# output_file = sys.argv[3]
+tumor = sys.argv[1]
+chr = sys.argv[2]
+bamfilelist_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.bamfilelist_from_siran.txt"
+output_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/{tumor}.{chr}.germline_variant_counts.txt"
+variant_file = f"/mnt/wigstore6/user/ranade/binless_clustering/DNA_alone/{tumor}/germline_var/{tumor}.var.{chr}.withGT.bed"
 variant_list = pd.read_csv(variant_file, sep="\t", header = None)
 
+variant_list = variant_list[(variant_list[3].str.len() == 1) & (variant_list[4].str.len() == 1)]
 
+variant_list = variant_list[(variant_list[3].str.len() == 1) & (variant_list[4].str.len() == 1)]
+variant_list = variant_list[variant_list[0] == chr]
+variant_list = variant_list[variant_list[5] != "0|0"]
+variant_list = variant_list[variant_list[5] != "1|1"]
 
 bincount_table = pd.read_csv(f"../data/{tumor}/{tumor}.bin_count_table_all_cells.txt", sep = "\t")
 
 cell_list = bincount_table.columns[5:]
 
 bamfilelist = pd.read_csv(bamfilelist_file, header = None)[0].values
-results = []
+outfile = open(output_file, "w")
+header = "chrom\tpos\tcell_id\tA_count\tT_count\tC_count\tG_count\tref_count\talt_count\ttotal_count\tGT\n"
+outfile.write(header)
 
 for bam_path in bamfilelist:
     bam = pysam.AlignmentFile(bam_path, "rb")
     min_base_quality = 20
     for variant in variant_list.values:
         print(variant)
-        chrom, pos_start, pos_end, ref, alt = variant
+        chrom, pos_start, pos_end, ref, alt, gt = variant
         uniq_ids = set()
         cell_id_specific_counts = {}
         for pileup_column in bam.pileup(
@@ -67,7 +74,8 @@ for bam_path in bamfilelist:
                         "G_count": 0,
                         "ref_count": 0,
                         "alt_count": 0,
-                        "total_count": 0
+                        "total_count": 0,
+                        "GT" : gt
                     }
 
                 if base == "A":
@@ -88,6 +96,8 @@ for bam_path in bamfilelist:
         for cell in cell_id_specific_counts:
             if cell_id_specific_counts[cell]["total_count"] > 0:
                 if cell in cell_list:
-                    results.append({"chrom": chrom, "pos": pos_end, "cell_id": cell, **cell_id_specific_counts[cell]})
+                    counts = cell_id_specific_counts[cell]
+                    line = f"{chrom}\t{pos_end}\t{cell}\t{counts['A_count']}\t{counts['T_count']}\t{counts['C_count']}\t{counts['G_count']}\t{counts['ref_count']}\t{counts['alt_count']}\t{counts['total_count']}\t{counts['GT']}\n"
+                    outfile.write(line)
 
-pd.DataFrame(results).to_csv(output_file, sep="\t", index=False)
+outfile.close()
