@@ -158,11 +158,19 @@ def compute_optimal_ploidy_and_profile(ratios_df, relative_counts, pop_col, m_ra
         
         # Sort local minima by cost (best first)
         local_minima.sort(key=lambda x: x[1])
-        # Find optimal multiplier
-        # optimal_m is the local min value closest to 2*relative_counts[pop_col.replace('_ratio', '')]
+
+        # Find optimal multiplier:
+        # 1) take the two local minima closest to target_m
+        # 2) among those, pick the one with lowest cost_results[m]
         target_m = 2 * relative_counts[pop_col.replace('_ratio', '')]
-        optimal_m = min(dict(local_minima).keys(), key=lambda x: abs(x - target_m))
-    
+
+        candidate_ms = [m for m, _ in local_minima]
+        if len(candidate_ms) == 0:
+            # Fallback if no local minima found
+            candidate_ms = list(cost_results.keys())
+
+        closest_two = sorted(candidate_ms, key=lambda m: abs(m - target_m))[:2]
+        optimal_m = min(closest_two, key=lambda m: cost_results[m])
         
     else:
         # Find optimal multiplier
