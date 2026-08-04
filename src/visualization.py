@@ -569,7 +569,9 @@ def plot_ploidy_comparison(results_df, cost_results, optimal_m, local_m, pop_col
     ax2_red_right.spines['right'].set_position(('outward', 60))  # Move far right
     
     # Plot the scaled copy numbers
-    scaled_col = f'{pop_col}_scaled'
+    ratio_col = f'{pop_col}_raw_ratio'
+    plot_data["scaled"] = plot_data[ratio_col]*optimal_m
+    scaled_col = "scaled"
     
     for idx, row in plot_data.iterrows():
         x_coords = [row['cum_start'], row['cum_end']]
@@ -766,11 +768,11 @@ def plot_copy_number_heatmap(heatmap_df, pop_boundaries, segment_info, title="Co
     
     # Create custom colormap: red (deletions) -> white (CN=2) -> blue (amplifications)
     colors_list = [
-        (0.0, 'darkred'),     # CN = 0
-        (0.25, 'red'),        # CN = 1
+        (0.0, 'darkblue'),     # CN = 0
+        (0.25, 'blue'),        # CN = 1
         (0.5, 'white'),        # CN = 2 (normal)
-        (0.75, 'blue'),         # CN = 3-4
-        (1.0, 'darkblue')       # CN = 5+
+        (0.75, 'red'),         # CN = 3-4
+        (1.0, 'darkred')       # CN = 5+
     ]
     
     cmap = LinearSegmentedColormap.from_list('copy_number', colors_list, N=256)
