@@ -1,0 +1,48 @@
+{
+  "tumor": "t24",
+  "saved_at": "2026-10-06T12:06:19",
+  "params": {
+    "n_seeds": 100,
+    "min_club_size": 2,
+    "max_seed_difference": 1,
+    "threshold": 0.75,
+    "max_depth": 10
+  },
+  "runs": [
+    {
+      "label": "A1",
+      "n_leaf_clusters": 67,
+      "n_tree_nodes": 87,
+      "n_assigned_cells": 2230,
+      "n_unassigned_cells": 311
+    },
+    {
+      "label": "B1",
+      "n_leaf_clusters": 125,
+      "n_tree_nodes": 156,
+      "n_assigned_cells": 2000,
+      "n_unassigned_cells": 541
+    },
+    {
+      "label": "C1",
+      "n_leaf_clusters": 67,
+      "n_tree_nodes": 85,
+      "n_assigned_cells": 2243,
+      "n_unassigned_cells": 298
+    }
+  ],
+  "files": [
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_A1_cluster_tree.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_A1_leaf_clusters.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_A1_cell_assignments.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_A1_unassigned_cells.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_B1_cluster_tree.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_B1_leaf_clusters.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_B1_cell_assignments.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_B1_unassigned_cells.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_C1_cluster_tree.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_C1_leaf_clusters.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_C1_cell_assignments.parquet",
+    "/data/safe/ranade/pythoncode/Multinomial_EM/data/t24/results_bundle/triple_run_20261006_120619/t24_C1_unassigned_cells.parquet"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "saved_at": "2026-09-29T15:16:40",
+  "runs": [
+    {
+      "label": "A",
+      "n_leaf_clusters": 213,
+      "n_tree_nodes": 254,
+      "n_assigned_cells": 1704,
+      "n_unassigned_cells": 837
+    },
+    {
+      "label": "B",
+      "n_leaf_clusters": 228,
+      "n_tree_nodes": 262,
+      "n_assigned_cells": 1801,
+      "n_unassigned_cells": 740
+    },
+    {
+      "label": "C",
+      "n_leaf_clusters": 189,
+      "n_tree_nodes": 221,
+      "n_assigned_cells": 1721,
+      "n_unassigned_cells": 820
+    }
+  ],
+  "files": [
+    "data/results_bundle/triple_run_20260929_151640/A_cluster_tree.csv",
+    "data/results_bundle/triple_run_20260929_151640/A_leaf_clusters.csv",
+    "data/results_bundle/triple_run_20260929_151640/A_cell_assignments.csv",
+    "data/results_bundle/triple_run_20260929_151640/A_unassigned_cells.csv",
+    "data/results_bundle/triple_run_20260929_151640/B_cluster_tree.csv",
+    "data/results_bundle/triple_run_20260929_151640/B_leaf_clusters.csv",
+    "data/results_bundle/triple_run_20260929_151640/B_cell_assignments.csv",
+    "data/results_bundle/triple_run_20260929_151640/B_unassigned_cells.csv",
+    "data/results_bundle/triple_run_20260929_151640/C_cluster_tree.csv",
+    "data/results_bundle/triple_run_20260929_151640/C_leaf_clusters.csv",
+    "data/results_bundle/triple_run_20260929_151640/C_cell_assignments.csv",
+    "data/results_bundle/triple_run_20260929_151640/C_unassigned_cells.csv"
+  ]
+}

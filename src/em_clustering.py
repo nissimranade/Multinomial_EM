@@ -98,14 +98,14 @@ def calculate_overlap(cells_a, cells_b):
     union = len(set_a | set_b)
     return intersection / union if union > 0 else 0
 
-def consensus_split_population(all_data, consensus_threshold=0.9, min_consensus=0.3, num_seeds=50):
+def consensus_split_population(all_data, consensus_threshold=0.9, min_consensus=0.3, num_seeds=50, rng=None):
     """
     Select split by descending log-likelihood, but require minimum consensus support.
     A candidate split is accepted if at least `min_consensus` fraction of OTHER splits
     have overlap >= `consensus_threshold` (flip-aware).
     """
     q_data = all_data / all_data.sum(axis=0)
-    Seeds = make_random_seeds(q_data, num_seeds)
+    Seeds = make_random_seeds(q_data, num_seeds, rng=rng)
 
     split_records = []
     for s in Seeds:
@@ -150,7 +150,7 @@ def consensus_split_population(all_data, consensus_threshold=0.9, min_consensus=
         print(f"Cluster 1: {len(chosen['cells_1'])} cells")
         print(f"Cluster 2: {len(chosen['cells_2'])} cells")
         print(f"Unassigned (stragglers): {len(chosen['unassigned'])} cells")
-        return chosen["cells_1"], chosen["cells_2"], chosen["unassigned"]
+        return chosen["cells_1"], chosen["cells_2"], chosen["unassigned"], chosen["mult_KV"]
 
     # Evaluate candidates in descending log-likelihood order
     n = len(split_records)
@@ -193,9 +193,9 @@ def consensus_split_population(all_data, consensus_threshold=0.9, min_consensus=
     return None, None, list(all_data.columns), None
 
 
-def ratio_of_ratios(all_data, consensus_threshold = 0.9, min_consensus = 0.3, num_seeds = 50,threshold=4/5, name=""):
+def ratio_of_ratios(all_data, consensus_threshold = 0.9, min_consensus = 0.3, num_seeds = 50,threshold=4/5, name="", plot=True, rng=None):
     """Ratio of ratios analysis for population splitting."""
-    cells_1, cells_2, unassigned, mult_KV = consensus_split_population(all_data, consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds)
+    cells_1, cells_2, unassigned, mult_KV = consensus_split_population(all_data, consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, rng=rng)
 
     if cells_1 is None or cells_2 is None:
         print("Consensus split failed.")
@@ -231,30 +231,34 @@ def ratio_of_ratios(all_data, consensus_threshold = 0.9, min_consensus = 0.3, nu
         ratios_1.append(r1)
         ratios_2.append(r2)
     slopes = []
-    fig,ax = plt.subplots(1, figsize=(10, 10))
-    
-    for r1, r2 in zip(ratios_1, ratios_2): 
-        plt.scatter(r1, r2, alpha=0.5)
-    for r1, r2 in zip(ratios_1, ratios_2): 
+    if plot:
+        fig,ax = plt.subplots(1, figsize=(10, 10))
+
+    for r1, r2 in zip(ratios_1, ratios_2):
+        if plot:
+            plt.scatter(r1, r2, alpha=0.5)
+    for r1, r2 in zip(ratios_1, ratios_2):
         model = RANSACRegressor(LinearRegression(fit_intercept=False)).fit(np.array(r1).reshape(-1, 1), np.array(r2))
         slopes.append(model.estimator_.coef_[0])
-        x_fit = np.linspace(min(r1), max(r1), 100).reshape(-1, 1)
-        y_fit = model.predict(x_fit)
-        plt.plot(x_fit, y_fit, linestyle='dashed')
+        if plot:
+            x_fit = np.linspace(min(r1), max(r1), 100).reshape(-1, 1)
+            y_fit = model.predict(x_fit)
+            plt.plot(x_fit, y_fit, linestyle='dashed')
 
-    x = np.linspace(0, 10, 50)
-    plt.plot(x, x, color='black')  # y=x line 
+    if plot:
+        x = np.linspace(0, 10, 50)
+        plt.plot(x, x, color='black')  # y=x line
 
-    y = threshold * x
-    plt.plot(x, y, color='grey')  # y=(4/5)x line
-    y = (1/threshold) * x
-    plt.plot(x, y, color='grey')  # y=(5/4)x line
+        y = threshold * x
+        plt.plot(x, y, color='grey')  # y=(4/5)x line
+        y = (1/threshold) * x
+        plt.plot(x, y, color='grey')  # y=(5/4)x line
 
-    l1 = str(len(cells_1))
-    l2 = str(len(cells_2))
-    plt.title(f"Ratio of Ratios Plot {name}1({l1}) and {name}2({l2})")
-    plt.xlim([0,10])
-    plt.ylim([0,10])
+        l1 = str(len(cells_1))
+        l2 = str(len(cells_2))
+        plt.title(f"Ratio of Ratios Plot {name}1({l1}) and {name}2({l2})")
+        plt.xlim([0,10])
+        plt.ylim([0,10])
     return slopes, top_indices, bottom_indices, cells_1, cells_2, unassigned, mult_KV
 
 
@@ -329,8 +333,10 @@ def recursive_em_split(data, cell_list, mult_KV_param=None,
     threshold=3/4,
     max_depth=10,
     current_depth=0,
-    min_cluster_size = 25, 
-    name="A"):
+    min_cluster_size = 25,
+    name="A",
+    plot=True,
+    rng=None):
     """
     Recursively splits cell populations using EM algorithm until slopes are within threshold.
     """
@@ -352,7 +358,7 @@ def recursive_em_split(data, cell_list, mult_KV_param=None,
     
     try:
         current_data = data[cell_list]
-        slopes, _, _, cells_1, cells_2, _, mult_KV = ratio_of_ratios(current_data, consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, name=name)
+        slopes, _, _, cells_1, cells_2, _, mult_KV = ratio_of_ratios(current_data, consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, name=name, plot=plot, rng=rng)
         if not slopes:
             print(f"{'  ' * current_depth}Consensus split failed for {name}")
             return {name: {'cells': cell_list, 'mult_KV': mult_KV_param}}
@@ -375,12 +381,12 @@ def recursive_em_split(data, cell_list, mult_KV_param=None,
         result = {}
         
         sub_result_1 = recursive_em_split(
-            data, cells_1, mult_KV_param=mult_KV[0], consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, max_depth=max_depth, current_depth=current_depth + 1, name=name + "1"
+            data, cells_1, mult_KV_param=mult_KV[0], consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, max_depth=max_depth, current_depth=current_depth + 1, name=name + "1", plot=plot, rng=rng
             )
         result.update(sub_result_1)
         
         sub_result_2 = recursive_em_split(
-            data, cells_2, mult_KV_param=mult_KV[1], consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, max_depth=max_depth, current_depth=current_depth + 1, name=name + "2"
+            data, cells_2, mult_KV_param=mult_KV[1], consensus_threshold=consensus_threshold, min_consensus=min_consensus, num_seeds=num_seeds, threshold=threshold, max_depth=max_depth, current_depth=current_depth + 1, name=name + "2", plot=plot, rng=rng
             )
         result.update(sub_result_2)
         

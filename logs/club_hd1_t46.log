@@ -1,0 +1,1897 @@
+=== Tumor t46 ===
+Data dir: /data/safe/ranade/pythoncode/Multinomial_EM/data/t46
+Settings: n_seeds=100, min_club_size=2, max_seed_difference=1, threshold=0.7500, max_depth=10
+Loaded 1627 cells x 124 segments
+A: 1627 cells (depth 0)
+Starting EM club finding
+Completed EM runs. Successful runs: 98
+
+Club sizes:
+[1341, 286]
+Major clubs: [1341, 286]
+Unassigned: 0
+Major clubs: [1341, 286]
+Unassigned: 0
+Splitting into 2 clubs.
+  A.0: 1341 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 34
+
+Club sizes:
+[708, 604, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [708, 604, 2, 2]
+Unassigned: 25
+  Major clubs: [708, 604, 2, 2]
+  Unassigned: 25
+  Splitting into 4 clubs.
+    A.0.0: 708 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 35
+
+Club sizes:
+[396, 196, 7, 6, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [396, 196, 7, 6, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Unassigned: 65
+    Major clubs: [396, 196, 7, 6, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+    Unassigned: 65
+    Splitting into 21 clubs.
+      A.0.0.0: 396 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 80
+
+Club sizes:
+[130, 75, 17, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [130, 75, 17, 3, 3, 2, 2, 2, 2, 2]
+Unassigned: 158
+      Major clubs: [130, 75, 17, 3, 3, 2, 2, 2, 2, 2]
+      Unassigned: 158
+      Splitting into 10 clubs.
+        A.0.0.0.0: 130 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 94
+
+Club sizes:
+[113, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [113, 2]
+Unassigned: 15
+        Major clubs: [113, 2]
+        Unassigned: 15
+        Splitting into 2 clubs.
+          A.0.0.0.0.0: 113 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 94
+
+Club sizes:
+[105, 2, 1, 1, 1, 1, 1, 1]
+Major clubs: [105, 2]
+Unassigned: 6
+          Major clubs: [105, 2]
+          Unassigned: 6
+          Splitting into 2 clubs.
+            A.0.0.0.0.0.0: 105 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 93
+
+Club sizes:
+[102, 1, 1, 1]
+Major clubs: [102]
+Unassigned: 3
+            Major clubs: [102]
+            Unassigned: 3
+            No split. Stopping.
+            A.0.0.0.0.0.1: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.0.0.0.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.1: 75 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[57, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [57, 2, 2, 2]
+Unassigned: 12
+        Major clubs: [57, 2, 2, 2]
+        Unassigned: 12
+        Splitting into 4 clubs.
+          A.0.0.0.1.0: 57 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[45, 4, 2, 1, 1, 1, 1, 1, 1]
+Major clubs: [45, 4, 2]
+Unassigned: 6
+          Major clubs: [45, 4, 2]
+          Unassigned: 6
+          Splitting into 3 clubs.
+            A.0.0.0.1.0.0: 45 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[38, 2, 1, 1, 1, 1, 1]
+Major clubs: [38, 2]
+Unassigned: 5
+            Major clubs: [38, 2]
+            Unassigned: 5
+            Splitting into 2 clubs.
+              A.0.0.0.1.0.0.0: 38 cells (depth 7)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[27, 5, 2, 1, 1, 1, 1]
+Major clubs: [27, 5, 2]
+Unassigned: 4
+              Major clubs: [27, 5, 2]
+              Unassigned: 4
+              Splitting into 3 clubs.
+                A.0.0.0.1.0.0.0.0: 27 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[12, 6, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [12, 6]
+Unassigned: 9
+                Major clubs: [12, 6]
+                Unassigned: 9
+                Splitting into 2 clubs.
+                  A.0.0.0.1.0.0.0.0.0: 12 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 12
+                  Major clubs: []
+                  Unassigned: 12
+                  No split. Stopping.
+                  A.0.0.0.1.0.0.0.0.1: 6 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 6
+                  Major clubs: []
+                  Unassigned: 6
+                  No split. Stopping.
+                A.0.0.0.1.0.0.0.1: 5 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+                Major clubs: []
+                Unassigned: 5
+                No split. Stopping.
+                A.0.0.0.1.0.0.0.2: 2 cells (depth 8)
+                Valid club, but too small to split into two clubs of at least 2. Stopping.
+              A.0.0.0.1.0.0.1: 2 cells (depth 7)
+              Valid club, but too small to split into two clubs of at least 2. Stopping.
+            A.0.0.0.1.0.1: 4 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+            Major clubs: []
+            Unassigned: 4
+            No split. Stopping.
+            A.0.0.0.1.0.2: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.0.0.1.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.0.0.1.2: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.0.0.1.3: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.2: 17 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [4, 2]
+Unassigned: 11
+        Major clubs: [4, 2]
+        Unassigned: 11
+        Splitting into 2 clubs.
+          A.0.0.0.2.0: 4 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+          Major clubs: []
+          Unassigned: 4
+          No split. Stopping.
+          A.0.0.0.2.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.3: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.4: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.5: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.6: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.7: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.8: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.0.9: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.1: 196 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 94
+
+Club sizes:
+[69, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [69, 2, 2]
+Unassigned: 123
+      Major clubs: [69, 2, 2]
+      Unassigned: 123
+      Splitting into 3 clubs.
+        A.0.0.1.0: 69 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 96
+
+Club sizes:
+[51, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [51, 2]
+Unassigned: 16
+        Major clubs: [51, 2]
+        Unassigned: 16
+        Splitting into 2 clubs.
+          A.0.0.1.0.0: 51 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[28, 11, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [28, 11, 2, 2]
+Unassigned: 8
+          Major clubs: [28, 11, 2, 2]
+          Unassigned: 8
+          Splitting into 4 clubs.
+            A.0.0.1.0.0.0: 28 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[19, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [19]
+Unassigned: 9
+            Major clubs: [19]
+            Unassigned: 9
+            No split. Stopping.
+            A.0.0.1.0.0.1: 11 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 11
+            Major clubs: []
+            Unassigned: 11
+            No split. Stopping.
+            A.0.0.1.0.0.2: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+            A.0.0.1.0.0.3: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.0.1.0.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.1.1: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.0.1.2: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.2: 7 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+      Major clubs: []
+      Unassigned: 7
+      No split. Stopping.
+      A.0.0.3: 6 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 6
+      Major clubs: []
+      Unassigned: 6
+      No split. Stopping.
+      A.0.0.4: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.5: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.6: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.7: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.8: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.9: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.10: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.11: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.12: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.13: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.14: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.15: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.16: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.17: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.18: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.19: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.0.20: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    A.0.1: 604 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 86
+
+Club sizes:
+[416, 13, 4, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [416, 13, 4, 3, 2, 2, 2, 2, 2, 2]
+Unassigned: 156
+    Major clubs: [416, 13, 4, 3, 2, 2, 2, 2, 2, 2]
+    Unassigned: 156
+    Splitting into 10 clubs.
+      A.0.1.0: 416 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 86
+
+Club sizes:
+[289, 102, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [289, 102, 3]
+Unassigned: 22
+      Major clubs: [289, 102, 3]
+      Unassigned: 22
+      Splitting into 3 clubs.
+        A.0.1.0.0: 289 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 93
+
+Club sizes:
+[281, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [281]
+Unassigned: 8
+        Major clubs: [281]
+        Unassigned: 8
+        No split. Stopping.
+        A.0.1.0.1: 102 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[69, 7, 5, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [69, 7, 5, 3]
+Unassigned: 18
+        Major clubs: [69, 7, 5, 3]
+        Unassigned: 18
+        Splitting into 4 clubs.
+          A.0.1.0.1.0: 69 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 89
+
+Club sizes:
+[56, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [56, 2]
+Unassigned: 11
+          Major clubs: [56, 2]
+          Unassigned: 11
+          Splitting into 2 clubs.
+            A.0.1.0.1.0.0: 56 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 94
+
+Club sizes:
+[51, 1, 1, 1, 1, 1]
+Major clubs: [51]
+Unassigned: 5
+            Major clubs: [51]
+            Unassigned: 5
+            No split. Stopping.
+            A.0.1.0.1.0.1: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          A.0.1.0.1.1: 7 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+          Major clubs: []
+          Unassigned: 7
+          No split. Stopping.
+          A.0.1.0.1.2: 5 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+          Major clubs: []
+          Unassigned: 5
+          No split. Stopping.
+          A.0.1.0.1.3: 3 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        A.0.1.0.2: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.1: 13 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 13
+      Major clubs: []
+      Unassigned: 13
+      No split. Stopping.
+      A.0.1.2: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []
+      Unassigned: 4
+      No split. Stopping.
+      A.0.1.3: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.4: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.5: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.6: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.7: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.8: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      A.0.1.9: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    A.0.2: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+    A.0.3: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+  A.1: 286 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[249, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [249, 3]
+Unassigned: 34
+  Major clubs: [249, 3]
+  Unassigned: 34
+  Splitting into 2 clubs.
+    A.1.0: 249 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 78
+
+Club sizes:
+[233, 4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [233, 4, 2]
+Unassigned: 10
+    Major clubs: [233, 4, 2]
+    Unassigned: 10
+    Splitting into 3 clubs.
+      A.1.0.0: 233 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 80
+
+Club sizes:
+[230, 1, 1, 1]
+Major clubs: [230]
+Unassigned: 3
+      Major clubs: [230]
+      Unassigned: 3
+      No split. Stopping.
+      A.1.0.1: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []
+      Unassigned: 4
+      No split. Stopping.
+      A.1.0.2: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    A.1.1: 3 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+B: 1627 cells (depth 0)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[1341, 286]
+Major clubs: [1341, 286]
+Unassigned: 0
+Major clubs: [1341, 286]
+Unassigned: 0
+Splitting into 2 clubs.
+  B.0: 1341 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 30
+
+Club sizes:
+[698, 596, 8, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [698, 596, 8, 4, 3, 2]
+Unassigned: 30
+  Major clubs: [698, 596, 8, 4, 3, 2]
+  Unassigned: 30
+  Splitting into 6 clubs.
+    B.0.0: 698 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 30
+
+Club sizes:
+[376, 193, 34, 30, 10, 8, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [376, 193, 34, 30, 10, 8, 3, 3, 3, 2, 2, 2]
+Unassigned: 32
+    Major clubs: [376, 193, 34, 30, 10, 8, 3, 3, 3, 2, 2, 2]
+    Unassigned: 32
+    Splitting into 12 clubs.
+      B.0.0.0: 376 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 89
+
+Club sizes:
+[108, 69, 11, 7, 7, 4, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [108, 69, 11, 7, 7, 4, 3, 2, 2, 2, 2, 2]
+Unassigned: 157
+      Major clubs: [108, 69, 11, 7, 7, 4, 3, 2, 2, 2, 2, 2]
+      Unassigned: 157
+      Splitting into 12 clubs.
+        B.0.0.0.0: 108 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 92
+
+Club sizes:
+[87, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [87, 3, 3]
+Unassigned: 15
+        Major clubs: [87, 3, 3]
+        Unassigned: 15
+        Splitting into 3 clubs.
+          B.0.0.0.0.0: 87 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 96
+
+Club sizes:
+[82, 1, 1, 1, 1, 1]
+Major clubs: [82]
+Unassigned: 5
+          Major clubs: [82]
+          Unassigned: 5
+          No split. Stopping.
+          B.0.0.0.0.1: 3 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+          B.0.0.0.0.2: 3 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.1: 69 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 98
+
+Club sizes:
+[58, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [58]
+Unassigned: 11
+        Major clubs: [58]
+        Unassigned: 11
+        No split. Stopping.
+        B.0.0.0.2: 11 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [2]
+Unassigned: 9
+        Major clubs: [2]
+        Unassigned: 9
+        No split. Stopping.
+        B.0.0.0.3: 7 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+        Major clubs: []
+        Unassigned: 7
+        No split. Stopping.
+        B.0.0.0.4: 7 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+        Major clubs: []
+        Unassigned: 7
+        No split. Stopping.
+        B.0.0.0.5: 4 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+        Major clubs: []
+        Unassigned: 4
+        No split. Stopping.
+        B.0.0.0.6: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.7: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.8: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.9: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.10: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.0.0.11: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.1: 193 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[65, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [65, 3]
+Unassigned: 125
+      Major clubs: [65, 3]
+      Unassigned: 125
+      Splitting into 2 clubs.
+        B.0.0.1.0: 65 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[46, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [46]
+Unassigned: 19
+        Major clubs: [46]
+        Unassigned: 19
+        No split. Stopping.
+        B.0.0.1.1: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.2: 34 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 95
+
+Club sizes:
+[25, 2, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [25, 2]
+Unassigned: 7
+      Major clubs: [25, 2]
+      Unassigned: 7
+      Splitting into 2 clubs.
+        B.0.0.2.0: 25 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[18, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [18]
+Unassigned: 7
+        Major clubs: [18]
+        Unassigned: 7
+        No split. Stopping.
+        B.0.0.2.1: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.3: 30 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 95
+
+Club sizes:
+[13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [13]
+Unassigned: 17
+      Major clubs: [13]
+      Unassigned: 17
+      No split. Stopping.
+      B.0.0.4: 10 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 10
+      Major clubs: []
+      Unassigned: 10
+      No split. Stopping.
+      B.0.0.5: 8 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 96
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 8
+      Major clubs: []
+      Unassigned: 8
+      No split. Stopping.
+      B.0.0.6: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.7: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.8: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.9: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.10: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.0.11: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    B.0.1: 596 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 89
+
+Club sizes:
+[432, 7, 4, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [432, 7, 4, 3, 2, 2, 2]
+Unassigned: 144
+    Major clubs: [432, 7, 4, 3, 2, 2, 2]
+    Unassigned: 144
+    Splitting into 7 clubs.
+      B.0.1.0: 432 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 92
+
+Club sizes:
+[247, 90, 35, 9, 7, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [247, 90, 35, 9, 7, 4]
+Unassigned: 40
+      Major clubs: [247, 90, 35, 9, 7, 4]
+      Unassigned: 40
+      Splitting into 6 clubs.
+        B.0.1.0.0: 247 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 80
+
+Club sizes:
+[231, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [231, 3, 2, 2]
+Unassigned: 9
+        Major clubs: [231, 3, 2, 2]
+        Unassigned: 9
+        Splitting into 4 clubs.
+          B.0.1.0.0.0: 231 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 70
+
+Club sizes:
+[213, 14, 1, 1, 1, 1]
+Major clubs: [213, 14]
+Unassigned: 4
+          Major clubs: [213, 14]
+          Unassigned: 4
+          Splitting into 2 clubs.
+            B.0.1.0.0.0.0: 213 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 76
+
+Club sizes:
+[207, 3, 1, 1, 1]
+Major clubs: [207, 3]
+Unassigned: 3
+            Major clubs: [207, 3]
+            Unassigned: 3
+            Splitting into 2 clubs.
+              B.0.1.0.0.0.0.0: 207 cells (depth 7)
+Starting EM club finding
+Completed EM runs. Successful runs: 70
+
+Club sizes:
+[192, 13, 1, 1]
+Major clubs: [192, 13]
+Unassigned: 2
+              Major clubs: [192, 13]
+              Unassigned: 2
+              Splitting into 2 clubs.
+                B.0.1.0.0.0.0.0.0: 192 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 68
+
+Club sizes:
+[169, 15, 5, 1, 1, 1]
+Major clubs: [169, 15, 5]
+Unassigned: 3
+                Major clubs: [169, 15, 5]
+                Unassigned: 3
+                Splitting into 3 clubs.
+                  B.0.1.0.0.0.0.0.0.0: 169 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 67
+
+Club sizes:
+[168, 1]
+Major clubs: [168]
+Unassigned: 1
+                  Major clubs: [168]
+                  Unassigned: 1
+                  No split. Stopping.
+                  B.0.1.0.0.0.0.0.0.1: 15 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [3, 2]
+Unassigned: 10
+                  Major clubs: [3, 2]
+                  Unassigned: 10
+                  Splitting into 2 clubs.
+                    B.0.1.0.0.0.0.0.0.1.0: 3 cells (depth 10)
+                    Maximum depth reached.
+                    B.0.1.0.0.0.0.0.0.1.1: 2 cells (depth 10)
+                    Maximum depth reached.
+                  B.0.1.0.0.0.0.0.0.2: 5 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+                  Major clubs: []
+                  Unassigned: 5
+                  No split. Stopping.
+                B.0.1.0.0.0.0.0.1: 13 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 13
+                Major clubs: []
+                Unassigned: 13
+                No split. Stopping.
+              B.0.1.0.0.0.0.1: 3 cells (depth 7)
+              Valid club, but too small to split into two clubs of at least 2. Stopping.
+            B.0.1.0.0.0.1: 14 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [2]
+Unassigned: 12
+            Major clubs: [2]
+            Unassigned: 12
+            No split. Stopping.
+          B.0.1.0.0.1: 3 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+          B.0.1.0.0.2: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+          B.0.1.0.0.3: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.1.0.1: 90 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[57, 6, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [57, 6, 5]
+Unassigned: 22
+        Major clubs: [57, 6, 5]
+        Unassigned: 22
+        Splitting into 3 clubs.
+          B.0.1.0.1.0: 57 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 92
+
+Club sizes:
+[49, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [49]
+Unassigned: 8
+          Major clubs: [49]
+          Unassigned: 8
+          No split. Stopping.
+          B.0.1.0.1.1: 6 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 6
+          Major clubs: []
+          Unassigned: 6
+          No split. Stopping.
+          B.0.1.0.1.2: 5 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+          Major clubs: []
+          Unassigned: 5
+          No split. Stopping.
+        B.0.1.0.2: 35 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[20, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [20, 2]
+Unassigned: 13
+        Major clubs: [20, 2]
+        Unassigned: 13
+        Splitting into 2 clubs.
+          B.0.1.0.2.0: 20 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [6, 2]
+Unassigned: 12
+          Major clubs: [6, 2]
+          Unassigned: 12
+          Splitting into 2 clubs.
+            B.0.1.0.2.0.0: 6 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[2, 1, 1, 1, 1]
+Major clubs: [2]
+Unassigned: 4
+            Major clubs: [2]
+            Unassigned: 4
+            No split. Stopping.
+            B.0.1.0.2.0.1: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          B.0.1.0.2.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        B.0.1.0.3: 9 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 9
+        Major clubs: []
+        Unassigned: 9
+        No split. Stopping.
+        B.0.1.0.4: 7 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 99
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+        Major clubs: []
+        Unassigned: 7
+        No split. Stopping.
+        B.0.1.0.5: 4 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+        Major clubs: []
+        Unassigned: 4
+        No split. Stopping.
+      B.0.1.1: 7 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 7
+      Major clubs: []
+      Unassigned: 7
+      No split. Stopping.
+      B.0.1.2: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []
+      Unassigned: 4
+      No split. Stopping.
+      B.0.1.3: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.1.4: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.1.5: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      B.0.1.6: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    B.0.2: 8 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 8
+    Major clubs: []
+    Unassigned: 8
+    No split. Stopping.
+    B.0.3: 4 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[2, 1, 1]
+Major clubs: [2]
+Unassigned: 2
+    Major clubs: [2]
+    Unassigned: 2
+    No split. Stopping.
+    B.0.4: 3 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+    B.0.5: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+  B.1: 286 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 96
+
+Club sizes:
+[242, 5, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [242, 5, 3]
+Unassigned: 36
+  Major clubs: [242, 5, 3]
+  Unassigned: 36
+  Splitting into 3 clubs.
+    B.1.0: 242 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 80
+
+Club sizes:
+[235, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [235]
+Unassigned: 7
+    Major clubs: [235]
+    Unassigned: 7
+    No split. Stopping.
+    B.1.1: 5 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+    Major clubs: []
+    Unassigned: 5
+    No split. Stopping.
+    B.1.2: 3 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+C: 1627 cells (depth 0)
+Starting EM club finding
+Completed EM runs. Successful runs: 98
+
+Club sizes:
+[1341, 286]
+Major clubs: [1341, 286]
+Unassigned: 0
+Major clubs: [1341, 286]
+Unassigned: 0
+Splitting into 2 clubs.
+  C.0: 1341 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 28
+
+Club sizes:
+[698, 604, 5, 4, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [698, 604, 5, 4, 2, 2, 2]
+Unassigned: 24
+  Major clubs: [698, 604, 5, 4, 2, 2, 2]
+  Unassigned: 24
+  Splitting into 7 clubs.
+    C.0.0: 698 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 33
+
+Club sizes:
+[363, 209, 27, 19, 17, 4, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [363, 209, 27, 19, 17, 4, 4, 3, 2, 2, 2, 2]
+Unassigned: 44
+    Major clubs: [363, 209, 27, 19, 17, 4, 4, 3, 2, 2, 2, 2]
+    Unassigned: 44
+    Splitting into 12 clubs.
+      C.0.0.0: 363 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 86
+
+Club sizes:
+[114, 97, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [114, 97, 3, 3, 2, 2]
+Unassigned: 142
+      Major clubs: [114, 97, 3, 3, 2, 2]
+      Unassigned: 142
+      Splitting into 6 clubs.
+        C.0.0.0.0: 114 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 93
+
+Club sizes:
+[97, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [97, 2]
+Unassigned: 15
+        Major clubs: [97, 2]
+        Unassigned: 15
+        Splitting into 2 clubs.
+          C.0.0.0.0.0: 97 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 92
+
+Club sizes:
+[94, 2, 1]
+Major clubs: [94, 2]
+Unassigned: 1
+          Major clubs: [94, 2]
+          Unassigned: 1
+          Splitting into 2 clubs.
+            C.0.0.0.0.0.0: 94 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 91
+
+Club sizes:
+[94]
+Major clubs: [94]
+Unassigned: 0
+            Major clubs: [94]
+            Unassigned: 0
+            No split. Stopping.
+            C.0.0.0.0.0.1: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          C.0.0.0.0.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.0.0.0.1: 97 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[73, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [73, 2]
+Unassigned: 22
+        Major clubs: [73, 2]
+        Unassigned: 22
+        Splitting into 2 clubs.
+          C.0.0.0.1.0: 73 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[56, 9, 3, 1, 1, 1, 1, 1]
+Major clubs: [56, 9, 3]
+Unassigned: 5
+          Major clubs: [56, 9, 3]
+          Unassigned: 5
+          Splitting into 3 clubs.
+            C.0.0.0.1.0.0: 56 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 98
+
+Club sizes:
+[44, 4, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [44, 4]
+Unassigned: 8
+            Major clubs: [44, 4]
+            Unassigned: 8
+            Splitting into 2 clubs.
+              C.0.0.0.1.0.0.0: 44 cells (depth 7)
+Starting EM club finding
+Completed EM runs. Successful runs: 98
+
+Club sizes:
+[28, 6, 2, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [28, 6, 2]
+Unassigned: 8
+              Major clubs: [28, 6, 2]
+              Unassigned: 8
+              Splitting into 3 clubs.
+                C.0.0.0.1.0.0.0.0: 28 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[11, 6, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [11, 6]
+Unassigned: 11
+                Major clubs: [11, 6]
+                Unassigned: 11
+                Splitting into 2 clubs.
+                  C.0.0.0.1.0.0.0.0.0: 11 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[3, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [3]
+Unassigned: 8
+                  Major clubs: [3]
+                  Unassigned: 8
+                  No split. Stopping.
+                  C.0.0.0.1.0.0.0.0.1: 6 cells (depth 9)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 6
+                  Major clubs: []
+                  Unassigned: 6
+                  No split. Stopping.
+                C.0.0.0.1.0.0.0.1: 6 cells (depth 8)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 6scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+scripts/run_club_split.py:73: RuntimeWarning: invalid value encountered in true_divide
+  mult_KV = mult_KV / np.sum(mult_KV, axis=1)[:, np.newaxis]
+
+                Major clubs: []
+                Unassigned: 6
+                No split. Stopping.
+                C.0.0.0.1.0.0.0.2: 2 cells (depth 8)
+                Valid club, but too small to split into two clubs of at least 2. Stopping.
+              C.0.0.0.1.0.0.1: 4 cells (depth 7)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+              Major clubs: []
+              Unassigned: 4
+              No split. Stopping.
+            C.0.0.0.1.0.1: 9 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 9
+            Major clubs: []
+            Unassigned: 9
+            No split. Stopping.
+            C.0.0.0.1.0.2: 3 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          C.0.0.0.1.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.0.0.0.2: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.0.0.0.3: 3 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.0.0.0.4: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.0.0.0.5: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.0.1: 209 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 95
+
+Club sizes:
+[74, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [74]
+Unassigned: 135
+      Major clubs: [74]
+      Unassigned: 135
+      No split. Stopping.
+      C.0.0.2: 27 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [12]
+Unassigned: 15
+      Major clubs: [12]
+      Unassigned: 15
+      No split. Stopping.
+      C.0.0.3: 19 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[12, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [12]
+Unassigned: 7
+      Major clubs: [12]
+      Unassigned: 7
+      No split. Stopping.
+      C.0.0.4: 17 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 17
+      Major clubs: []
+      Unassigned: 17
+      No split. Stopping.
+      C.0.0.5: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 44
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []
+      Unassigned: 4
+      No split. Stopping.
+      C.0.0.6: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []
+      Unassigned: 4
+      No split. Stopping.
+      C.0.0.7: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.0.8: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.0.9: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.0.10: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.0.11: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.0.1: 604 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 82
+
+Club sizes:
+[420, 11, 10, 10, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [420, 11, 10, 10, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Unassigned: 126
+    Major clubs: [420, 11, 10, 10, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+    Unassigned: 126
+    Splitting into 16 clubs.
+      C.0.1.0: 420 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 93
+
+Club sizes:
+[292, 100, 4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [292, 100, 4, 2]
+Unassigned: 22
+      Major clubs: [292, 100, 4, 2]
+      Unassigned: 22
+      Splitting into 4 clubs.
+        C.0.1.0.0: 292 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 96
+
+Club sizes:
+[290, 1, 1]
+Major clubs: [290]
+Unassigned: 2
+        Major clubs: [290]
+        Unassigned: 2
+        No split. Stopping.
+        C.0.1.0.1: 100 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[66, 7, 5, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [66, 7, 5, 4]
+Unassigned: 18
+        Major clubs: [66, 7, 5, 4]
+        Unassigned: 18
+        Splitting into 4 clubs.
+          C.0.1.0.1.0: 66 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 93
+
+Club sizes:
+[55, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [55, 2]
+Unassigned: 9
+          Major clubs: [55, 2]
+          Unassigned: 9
+          Splitting into 2 clubs.
+            C.0.1.0.1.0.0: 55 cells (depth 6)
+Starting EM club finding
+Completed EM runs. Successful runs: 92
+
+Club sizes:
+[49, 1, 1, 1, 1, 1, 1]
+Major clubs: [49]
+Unassigned: 6
+            Major clubs: [49]
+            Unassigned: 6
+            No split. Stopping.
+            C.0.1.0.1.0.1: 2 cells (depth 6)
+            Valid club, but too small to split into two clubs of at least 2. Stopping.
+          C.0.1.0.1.1: 7 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[2, 1, 1, 1, 1, 1]
+Major clubs: [2]
+Unassigned: 5
+          Major clubs: [2]
+          Unassigned: 5
+          No split. Stopping.
+          C.0.1.0.1.2: 5 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+          Major clubs: []
+          Unassigned: 5
+          No split. Stopping.
+          C.0.1.0.1.3: 4 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+          Major clubs: []
+          Unassigned: 4
+          No split. Stopping.
+        C.0.1.0.2: 4 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+        Major clubs: []
+        Unassigned: 4
+        No split. Stopping.
+        C.0.1.0.3: 2 cells (depth 4)
+        Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.1: 11 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 11
+      Major clubs: []
+      Unassigned: 11
+      No split. Stopping.
+      C.0.1.2: 10 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 77
+
+Club sizes:
+[3, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [3]
+Unassigned: 7
+      Major clubs: [3]
+      Unassigned: 7
+      No split. Stopping.
+      C.0.1.3: 10 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 10
+      Major clubs: []
+      Unassigned: 10
+      No split. Stopping.
+      C.0.1.4: 4 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+      Major clubs: []scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+scripts/run_club_split.py:63: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+
+      Unassigned: 4
+      No split. Stopping.
+      C.0.1.5: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.6: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.7: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.8: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.9: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.10: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.11: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.12: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.13: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.14: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+      C.0.1.15: 2 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.0.2: 5 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 79
+
+Club sizes:
+[1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 5
+    Major clubs: []
+    Unassigned: 5
+    No split. Stopping.
+    C.0.3: 4 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1]
+Major clubs: []
+Unassigned: 4
+    Major clubs: []
+    Unassigned: 4
+    No split. Stopping.
+    C.0.4: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.0.5: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.0.6: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+  C.1: 286 cells (depth 1)
+Starting EM club finding
+Completed EM runs. Successful runs: 97
+
+Club sizes:
+[246, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [246, 3, 2]
+Unassigned: 35
+  Major clubs: [246, 3, 2]
+  Unassigned: 35
+  Splitting into 3 clubs.
+    C.1.0: 246 cells (depth 2)
+Starting EM club finding
+Completed EM runs. Successful runs: 87
+
+Club sizes:
+[231, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: [231, 3]
+Unassigned: 12
+    Major clubs: [231, 3]
+    Unassigned: 12
+    Splitting into 2 clubs.
+      C.1.0.0: 231 cells (depth 3)
+Starting EM club finding
+Completed EM runs. Successful runs: 83
+
+Club sizes:
+[218, 8, 1, 1, 1, 1, 1]
+Major clubs: [218, 8]
+Unassigned: 5
+      Major clubs: [218, 8]
+      Unassigned: 5
+      Splitting into 2 clubs.
+        C.1.0.0.0: 218 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 66
+
+Club sizes:
+[211, 2, 1, 1, 1, 1, 1]
+Major clubs: [211, 2]
+Unassigned: 5
+        Major clubs: [211, 2]
+        Unassigned: 5
+        Splitting into 2 clubs.
+          C.1.0.0.0.0: 211 cells (depth 5)
+Starting EM club finding
+Completed EM runs. Successful runs: 70
+
+Club sizes:
+[207, 1, 1, 1, 1]
+Major clubs: [207]
+Unassigned: 4
+          Major clubs: [207]
+          Unassigned: 4
+          No split. Stopping.
+          C.1.0.0.0.1: 2 cells (depth 5)
+          Valid club, but too small to split into two clubs of at least 2. Stopping.
+        C.1.0.0.1: 8 cells (depth 4)
+Starting EM club finding
+Completed EM runs. Successful runs: 100
+
+Club sizes:
+[1, 1, 1, 1, 1, 1, 1, 1]
+Major clubs: []
+Unassigned: 8
+        Major clubs: []
+        Unassigned: 8
+        No split. Stopping.
+      C.1.0.1: 3 cells (depth 3)
+      Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.1.1: 3 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+    C.1.2: 2 cells (depth 2)
+    Valid club, but too small to split into two clubs of at least 2. Stopping.
+
+Saved all 3 runs to: /data/safe/ranade/pythoncode/Multinomial_EM/data/t46/results_bundle/triple_run_20261006_113536
+  label  n_leaf_clusters  n_tree_nodes  n_assigned_cells  n_unassigned_cells
+0    A1               70            91               913                 714
+1    B1               59            78               963                 664
+2    C1               60            79              1115                 512

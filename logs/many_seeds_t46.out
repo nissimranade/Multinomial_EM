@@ -1,0 +1,109 @@
+/data/safe/ranade/pythoncode/Multinomial_EM/src/em_clustering.py:45: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+/data/safe/ranade/pythoncode/Multinomial_EM/src/em_clustering.py:45: RuntimeWarning: divide by zero encountered in log
+  logmult_KV = np.log(mult_KV)
+Loaded 124 bins x 1627 cells for t46
+Assignments -> /data/safe/ranade/pythoncode/Multinomial_EM/data/t46/t46_em_many_seeds_assignments.csv
+Summary     -> /data/safe/ranade/pythoncode/Multinomial_EM/data/t46/t46_em_many_seeds_assignments.summary.csv
+Split trace -> /data/safe/ranade/pythoncode/Multinomial_EM/logs/em_many_seeds_t46.log
+run_000: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_001: 10 clusters -> {'A1': 283, 'A21': 527, 'A22111': 42, 'A22112': 163, 'A2212': 72, 'A2221': 89, 'A22221': 40, 'A2222211': 280, 'A2222212': 89, 'A222222': 42}
+run_002: 3 clusters -> {'A1': 284, 'A21': 722, 'A22': 621}
+run_003: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_004: 9 clusters -> {'A1111': 141, 'A11121': 44, 'A11122': 71, 'A112': 426, 'A12111': 37, 'A12112': 38, 'A1212': 46, 'A122': 542, 'A2': 282}
+run_005: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_006: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_007: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_008: 5 clusters -> {'A11': 570, 'A1211': 427, 'A1212': 48, 'A122': 299, 'A2': 283}
+run_009: 10 clusters -> {'A1': 283, 'A21': 525, 'A2211': 39, 'A2212': 60, 'A22211': 58, 'A222121': 161, 'A222122': 236, 'A222211': 71, 'A222212': 160, 'A22222': 34}
+run_010: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_011: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_012: 8 clusters -> {'A111': 60, 'A1121': 512, 'A1122': 43, 'A1211': 53, 'A12121': 62, 'A12122': 157, 'A122': 459, 'A2': 281}
+run_013: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_014: 4 clusters -> {'A11': 612, 'A12': 722, 'A21': 33, 'A22': 260}
+run_015: 3 clusters -> {'A11': 722, 'A12': 621, 'A2': 284}
+run_016: 3 clusters -> {'A1': 284, 'A21': 620, 'A22': 723}
+run_017: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_018: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_019: 7 clusters -> {'A111': 458, 'A11211': 46, 'A11212': 57, 'A1122': 183, 'A121': 88, 'A122': 513, 'A2': 282}
+run_020: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_021: 3 clusters -> {'A11': 33, 'A12': 260, 'A2': 1334}
+run_022: 3 clusters -> {'A11': 613, 'A12': 730, 'A2': 284}
+run_023: 9 clusters -> {'A111': 403, 'A1121': 193, 'A1122': 61, 'A12111': 62, 'A12112': 304, 'A1212': 216, 'A1221': 65, 'A1222': 40, 'A2': 283}
+run_024: 3 clusters -> {'A1': 284, 'A21': 720, 'A22': 623}
+run_025: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_026: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_027: 3 clusters -> {'A1': 284, 'A21': 725, 'A22': 618}
+run_028: 5 clusters -> {'A1': 282, 'A211': 519, 'A212': 122, 'A221': 623, 'A222': 81}
+run_029: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_030: 3 clusters -> {'A1': 1335, 'A21': 260, 'A22': 32}
+run_031: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_032: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_033: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_034: 3 clusters -> {'A1': 1334, 'A21': 257, 'A22': 36}
+run_035: 3 clusters -> {'A11': 722, 'A12': 621, 'A2': 284}
+run_036: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_037: 1 clusters -> {'A': 1627}
+run_038: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_039: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_040: 1 clusters -> {'A': 1627}
+run_041: 3 clusters -> {'A1': 1333, 'A21': 258, 'A22': 36}
+run_042: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_043: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_044: 3 clusters -> {'A1': 1333, 'A21': 256, 'A22': 38}
+run_045: 6 clusters -> {'A1': 283, 'A21111': 90, 'A21112': 70, 'A2112': 156, 'A212': 458, 'A22': 570}
+run_046: 4 clusters -> {'A11': 259, 'A12': 33, 'A21': 665, 'A22': 670}
+run_047: 3 clusters -> {'A1': 284, 'A21': 720, 'A22': 623}
+run_048: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_049: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_050: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_051: 3 clusters -> {'A1': 284, 'A21': 722, 'A22': 621}
+run_052: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_053: 3 clusters -> {'A11': 613, 'A12': 730, 'A2': 284}
+run_054: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_055: 3 clusters -> {'A1': 1333, 'A21': 256, 'A22': 38}
+run_056: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_057: 4 clusters -> {'A111': 584, 'A112': 67, 'A12': 693, 'A2': 283}
+run_058: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_059: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_060: 7 clusters -> {'A11': 31, 'A12': 258, 'A21111': 60, 'A21112': 461, 'A2112': 103, 'A212': 108, 'A22': 606}
+run_061: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_062: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_063: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_064: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_065: 3 clusters -> {'A1': 284, 'A21': 618, 'A22': 725}
+run_066: 9 clusters -> {'A1': 283, 'A2111': 162, 'A21121': 250, 'A21122': 58, 'A21211': 176, 'A21212': 65, 'A2122': 65, 'A221': 63, 'A222': 505}
+run_067: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_068: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_069: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_070: 3 clusters -> {'A1': 1333, 'A21': 38, 'A22': 256}
+run_071: 7 clusters -> {'A1111': 38, 'A111211': 453, 'A111212': 74, 'A11122': 58, 'A112': 100, 'A12': 620, 'A2': 284}
+run_072: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_073: 3 clusters -> {'A1': 1335, 'A21': 261, 'A22': 31}
+run_074: 3 clusters -> {'A11': 621, 'A12': 722, 'A2': 284}
+run_075: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_076: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_077: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_078: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_079: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_080: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_081: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_082: 3 clusters -> {'A1': 1335, 'A21': 261, 'A22': 31}
+run_083: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_084: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_085: 4 clusters -> {'A1': 283, 'A211': 570, 'A212': 78, 'A22': 696}
+run_086: 3 clusters -> {'A11': 617, 'A12': 726, 'A2': 284}
+run_087: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_088: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_089: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_090: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_091: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_092: 5 clusters -> {'A1': 283, 'A21': 666, 'A221': 108, 'A2221': 75, 'A2222': 495}
+run_093: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_094: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_095: 2 clusters -> {'A1': 286, 'A2': 1341}
+run_096: 3 clusters -> {'A1': 284, 'A21': 725, 'A22': 618}
+run_097: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_098: 2 clusters -> {'A1': 1341, 'A2': 286}
+run_099: 7 clusters -> {'A1111': 54, 'A11121': 202, 'A111221': 36, 'A111222': 258, 'A112': 258, 'A12': 535, 'A2': 284}
+Done. 100/100 runs completed.

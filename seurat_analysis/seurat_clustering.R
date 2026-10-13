@@ -86,7 +86,7 @@ p <- DimPlot(seurat_obj_good, reduction = "umap", label = TRUE)
 ggsave("seurat_clusters_WGS_good_cells_umap.png", p, width = 6, height = 5)
 
 # Load EM population assignments
-em_assignments <- read.table("../data/t57/t57_population_assignments_A_WGS_bins.txt", 
+em_assignments <- read.table("../data/t57/t57_new_population_assignments_C.txt", 
                              header = TRUE, sep = "\t", stringsAsFactors = FALSE)
 
 # Match EM assignments to Seurat cells
